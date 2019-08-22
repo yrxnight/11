@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <a href="http://www.baidu.com">join us</a><br>
+    {#下面是一个变量代码块的使用#}
+    {{ url_str }}<br>
+    {# 列表的传入和使用    #}
+    {{ my_list }}<br>
+    {{ my_list.2 }}<br>
+    {{ my_dict }}<br>
+    {{ my_dict.url }}<br>
+    <hr>
+    {#控制代码块#}
+    {#for循环的使用，建议先写for,然后按tab键进行补全#}
+    {% for foo in my_list %}
+    {#数据大于３，才能显示 #}
+        {% if foo > 3 %}
+            {{ foo }}<br>
+
+        {% endif %}
+
+
+{% endfor %}
+    <hr>
+<p>{{ url_str | upper   }}</p>
+<p>{{ url_str | reverse }}</p>
+<p>{{ my_list | sum }}</p>
+
+</body>
+</html>
